@@ -5,7 +5,7 @@ Thanks for your interest in AUV Arena Mapper! Bug reports, feature ideas and pul
 ## Development setup
 
 ```bash
-git clone https://github.com/<your-user>/auv-arena-mapper.git
+git clone https://github.com/ItsShiroNeko/auv-arena-mapper.git
 cd auv-arena-mapper
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
