@@ -4,7 +4,6 @@
 
 **Design AUV competition pools, place objects, and plan waypoint missions - in a single, dependency-free desktop app.**
 
-[![CI](https://github.com/ItsShiroNeko/auv-arena-mapper/actions/workflows/ci.yml/badge.svg)](https://github.com/ItsShiroNeko/auv-arena-mapper/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.8%2B-3776AB?logo=python&logoColor=white)
 ![Platforms](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
