@@ -44,8 +44,8 @@ It ships with a template based on the **SAUVC** arena (50 x 25 m pool).
 
 ```bash
 # from source
-git clone https://github.com/ItsShiroNeko/auv-arena-mapper.git
-cd auv-arena-mapper
+git clone https://github.com/ItsShiroNeko/arena-mapper.git
+cd arena-mapper
 pip install .
 ```
 
@@ -91,7 +91,7 @@ object kinds and mission tokens.
 ## Repository layout
 
 ```
-auv-arena-mapper/
+arena-mapper/
 ├── src/auv_mapper/
 │   ├── model.py          # Project, Obj, Waypoint, planner, validator (pure Python)
 │   ├── geometry.py       # vectors, bearings, view fitting

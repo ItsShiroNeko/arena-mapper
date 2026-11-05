@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "auv-arena-mapper"
+name = "arena-mapper"
 dynamic = ["version"]
 description = "Desktop tool to design AUV pool arenas, place objects and plan waypoint missions."
 readme = "README.md"
@@ -34,9 +34,9 @@ auv-mapper = "auv_mapper.cli:main"
 auv-mapper-gui = "auv_mapper.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/ItsShiroNeko/auv-arena-mapper"
-Issues = "https://github.com/ItsShiroNeko/auv-arena-mapper/issues"
-Changelog = "https://github.com/ItsShiroNeko/auv-arena-mapper/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/ItsShiroNeko/arena-mapper"
+Issues = "https://github.com/ItsShiroNeko/arena-mapper/issues"
+Changelog = "https://github.com/ItsShiroNeko/arena-mapper/blob/main/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
 version = { attr = "auv_mapper.__version__" }
