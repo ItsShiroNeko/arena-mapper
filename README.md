@@ -64,6 +64,59 @@ Quick start:
 3. Open the **Misi** tab, edit the mission order (e.g. `orange gate yellow red blue drum_blue surface`) and press **Generate** (`P`).
 4. Check the **Cek** tab for warnings, press `F5` to simulate, then export CSV / JSON for your vehicle's controller.
 
+# Running on Windows
+
+Tested layout: Windows 10/11, Python 3.8+ from python.org. All commands work in Command Prompt (`cmd`) and PowerShell.
+
+## 1. Install Python with Tk
+1. Download Python from <https://www.python.org/downloads/windows/>.
+2. In the installer tick **Add python.exe to PATH**, choose **Customize installation** and keep **tcl/tk and IDLE** ticked.
+3. Verify:
+   ```
+   python --version
+   python -c "import tkinter; print('tk ok')"
+   ```
+   If `python` is not found, try `py` instead (e.g. `py run.py`).
+
+## 2. Run (no installation, recommended)
+AUV Arena Mapper uses only the standard library, so nothing has to be installed.
+
+Extract the project, then either **double-click `run.bat`**, or in a terminal:
+```
+cd C:\path\to\auv-arena-mapper
+python run.py
+python run.py C:\path\to\project.auvmap     :: open a project directly
+```
+Equivalent without the launcher:
+```
+cd C:\path\to\auv-arena-mapper
+set PYTHONPATH=src
+python -m auv_mapper
+```
+(PowerShell: `$env:PYTHONPATH = "src"`.)
+
+## 3. Optional: install as a command
+```
+python -m venv .venv
+.venv\Scripts\activate
+python -m pip install .
+auv-mapper
+```
+Prefer `python -m pip` over `pip`: it avoids a broken or blocked `pip.exe`.
+
+## Troubleshooting
+| Message | Fix |
+|---------|-----|
+| `pip.exe was blocked by your organization's Device Guard policy` | Company policy blocks executables in the venv. Use step 2 (`python run.py`) - no pip needed. |
+| `No module named auv-mapper` | The module is `auv_mapper` (underscore). Use `python -m auv_mapper` or `python run.py`. |
+| `'auv-mapper' is not recognized` | The command only exists after a successful install. Use `python run.py`. |
+| `No module named tkinter` | Re-run the Python installer -> Modify -> tick **tcl/tk and IDLE**. |
+| `.venv\Scripts\activate` is disabled in PowerShell | `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`, or use `cmd`. |
+| `python` is not recognized | Reinstall with **Add python.exe to PATH**, or use `py`. |
+| Blurry window on a high-DPI screen | Already handled (DPI awareness is enabled automatically). |
+
+App settings are stored in `%APPDATA%\AUVMapper`; new projects default to `Documents\AUVMapper`.
+
 ### Keyboard shortcuts (excerpt)
 
 | Action | Shortcut | | Action | Shortcut |
